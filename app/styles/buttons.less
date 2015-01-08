@@ -1,0 +1,96 @@
+@import "variables.less";
+.opacity-transition{
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.button-transition{
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	-webkit-transition: all .3s;
+    transition: all .3s;
+}
+/*buttons*/
+#menu-button{
+	position: fixed;
+	z-index: 999;
+	margin: 25px 10px;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	border: none;
+	font-size: 2em;
+	color: transparent;
+	background: transparent;
+	opacity: 1;
+	cursor: pointer;
+
+	&::before{
+		color: @color-side;
+	 	content: '\e800';
+	 }
+
+	.opacity-transition;
+    &:hover{
+    	opacity: 0.75;
+    }
+}
+
+.close-button{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	overflow: hidden;
+	font-size: 1.5em;
+	border: none;
+	background: transparent;
+	color: transparent;
+	cursor: pointer;
+	z-index: 1000;
+	&::before{
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: @color-white;
+	 	content: '\e801';
+	}
+}
+
+#top-button{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	z-index: 999;
+	bottom:0;
+	margin: 25px 10px;
+	padding: 0;
+	overflow: hidden;
+	font-size: 2em;
+	border: none;
+	color: transparent;
+	display: none;
+	opacity: 1;
+	.opacity-transition;
+	cursor: pointer;
+    &:hover{
+    	opacity: 0.75;
+    }
+    &::before{
+		color: @color-side;
+	 	content: '\e80b';
+	}
+}
+
+button.button{
+	padding: 10px 25px;
+	border: none;
+	background: @color-second;
+	.button-transition;
+	&:hover{
+		background: @color-primary;
+		color:@color-white;
+	}
+}

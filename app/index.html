@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1">
+		<title>Alice Neichols - Étudiante Ingénieur IMAC</title>
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet"  href="styles/main.css">
+		<link rel="stylesheet"  href="styles/home.css">
+		
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<i id="menu-button" class="icon-menu">Menu</i>
+			<div id="home-content" class="main-content">
+				<div class="info">
+					<div class="title">
+						<h1>Alice Neichols</h1>
+						<h2>Ingénieur créatif</h2>
+					</div>
+					
+
+					<div class="content">
+						<p>Je suis actuellement en 2<sup>ème</sup> d'année d'école d'ingénieur à l'IMAC ( Image, Multimédia, Audiovisuel et Communication) . L'univers des jeux vidéos me passionne et m'a poussée à venir dans cette branche.</p>
+						<p><strong>Je suis actuellement à la recherche d'un stage dans ce domaine durant la période de juin 2015 à aout 2015.</strong></p>
+						<div id="buttons-list">
+							<a href="./documents/cv.pdf"><button class="button">C.V.</button></a>
+							<a href="./contact.html"><button class="button">Contact</button></a>
+						</div>
+					</div>
+				</div>
+				<div id="avatar"></div>
+			</div>
+			<div id="sideBar">
+				<i class="close-button icon-close">Fermer</i>
+				<div id="sideBar-content">
+					<ul class="menu">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="text">Accueil</span>
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								<i class="icon-portfolio"></i>
+								<span class="text">Créations</span>
+							</a>
+						</li>
+						<li>
+							<a href="contact.html">
+								<i class="icon-bubble"></i>
+								<span class="text">Contact</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="links">
+						<li><a href="http://www.facebook.com/alice.neichols">
+						<i class="icon-facebook"></i>Facebook</a></li>
+						<li><a href="http://twitter.com/LiliLuciol"><i class="icon-twitter"></i>Twitter</a></li>
+						<li><a href="https://www.linkedin.com/profile/view?id=380172506"><i class="icon-linkedin"></i>Linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<link rel="stylesheet"  href="styles/sidebar.css">
+		<link rel="stylesheet"  href="styles/buttons.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			h1,h2,h3,#sideBar {font-family: 'Raleway', sans-serif;}
+		</style>
+	</body>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#menu-button").click(function(){
+				$("#sideBar").addClass("sideHover");
+				$(".main-content").addClass("sideHover");
+				$(".main-content").click(function(){
+					$(".sideHover").removeClass("sideHover");
+				});
+			});
+			$("#sideBar .close-button").click(function(){
+				$(".sideHover").removeClass("sideHover");
+			});
+			
+		});
+	</script>
+</html>

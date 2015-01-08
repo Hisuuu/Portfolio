@@ -1,0 +1,101 @@
+@import "variables.less";
+/**side bar*/
+.side-menu-transition{
+	-moz-transition: width .5s;
+	-o-transition: width .5s;
+	-webkit-transition: width .5s;
+    transition: width .5s;
+    width: 0px;
+    &.sideHover{
+    	width: 320px;
+    }
+}
+
+.side-button-transition{
+	-moz-transition: margin-left .5s;
+	-o-transition: margin-left .5s;
+	-webkit-transition: margin-left .5s;
+    transition: margin-left .5s;
+    margin-left: 0px;
+}
+#sideBar{
+	position: fixed;
+	height: 100%;
+	background-color: @color-side;
+	top: 0;
+	font-size: 1.15em;
+	font-weight: bold;
+	display: block;
+	z-index: 1000;
+	.side-menu-transition;
+	overflow: hidden;
+}
+#sideBar a{
+	color: @color-white;
+}
+#sideBar-content{
+	width: 320px;
+	position: absolute;
+	top: 30%;
+	@media (max-height:640px){
+		top: 10%;
+	}
+	@media (min-height:641px){
+		top: 30%;
+	}
+}
+#sideBar ul{
+	width: 320px;
+}
+#sideBar .menu li{
+	margin-bottom: 25px;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	&:hover{
+		background: @color-primary;
+	}
+}
+#sideBar .menu li a{
+	display: block;
+}
+#sideBar ul.links{
+	text-align: right;
+}
+#sideBar .links li{
+	margin-bottom: 10px;
+	margin-right: 50px;
+}
+#sideBar .links li:hover a{
+	color: @color-second;
+}
+
+#sideBar i{
+	display: inline-block;
+	width: 1em;
+	text-align: center;
+	line-height: 1em;
+}
+
+#sideBar .menu i{
+	margin: 0 25px;
+}
+
+#sideBar .links i{
+	margin: 0 10px;
+}
+
+.icon-home:before { content: '\e805'; }
+.icon-portfolio:before { content: '\e812'; }
+.icon-user:before { content: '\e810'; }
+.icon-bubble:before { content: '\e802'; }
+.icon-facebook:before { content: '\e80d'; }
+.icon-twitter:before { content: '\e80c'; }
+.icon-linkedin:before { content: '\e80e'; }
+
+#sideBar .text{
+	.side-button-transition;
+}
+#sideBar li:hover .text{
+	margin-left: 25px;
+}
